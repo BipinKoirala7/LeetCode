@@ -3,8 +3,10 @@ package FirstOccurrence;
 /**
  * Title: Find the index of the first occurrence of a string.
  * Problem: Given two strings needle and haystack, return the index of the
- *          first occurrence of needle in haystack, or -1 if needle is not part of haystack.
- * Link: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+ * first occurrence of needle in haystack, or -1 if needle is not part of
+ * haystack.
+ * Link:
+ * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
  * 
  * Constraints:
  * 1 <= haystack.length, needle.length <= 10^4
@@ -24,6 +26,13 @@ package FirstOccurrence;
  * Complexity Analysis:
  * Time Complexity: O((n - m) * m), where n = haystack length, m = needle length
  * Space Complexity: O(1)
+ * 
+ * Approach:
+ * My approach was pretty common and that is to loop through the haystack until
+ * a point where there is no chance of haystack containing needle. Just using
+ * .substring(start,end) and using the Object.equals to check if it is needle
+ * or not. If yes then we can return the index at the loop, if not then move 
+ * ahead in loop. If needle is not present in haystack, then return -1;
  * 
  * @author my_name
  * @since 1.0
