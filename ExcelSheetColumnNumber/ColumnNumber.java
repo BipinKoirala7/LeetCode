@@ -34,24 +34,19 @@ package ExcelSheetColumnNumber;
  * columnTitle is in the range ["A", "FXSHRXW"].
  * 
  * Approach: 
- * If we take a sum integer to track the sum and loop over the character array from the columnTitle, then
- * we can get the value we need. For this, we would need a second method which knows about the value of 
- * capital alphabets and then using it. In the loop we need to add to the sum and we need to multiply the
- * each loop sum by 26 to the power of character array length minus 1 minus loop pointer (array.length - 1 - i)
- * then add the sum to the total sum. 26 power is required as each increase in number of alphabet goes by 26 rounds.
+ * If we take a sum integer result to track the sum and loop over the character array from the columnTitle, then
+ * we can get the value we need. We can use ascii number to find the value of the alphabet and since every step 
+ * is worth 26 we can multiply the previous result by 26 before adding next number if exists.
  * 
  * Complexity Analysis:
- * Time: 4ms, Beats 1.76%
+ * Time: 1ms, Beats 89.28%
  * Time Complexity: 0(n)
- * Memory Space: 44.6 MB
+ * Memory Space: 42.2 MB
  * Space Complexity: 0(1)
  * 
  * @author BipinKoirala
  * @since 1.0
  */
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class ColumnNumber {
     /**
@@ -64,53 +59,13 @@ public class ColumnNumber {
         // Create a character array so to loop over the column title.
         char[] columnCharArray = columnTitle.toCharArray();
         // integer to track the sum
-        int sum = 0;
+        int result = 0;
 
         // loop over the character array created from column title to find the sum
-        for (int i = 0; i < columnCharArray.length; i++) {
-            // givenStringValue gives the integer value of alphabet
-            // We need to multiply the string value by 26 because every increase in length goes by 26 rounds.
-            sum += givenStringValue(String.valueOf(columnCharArray[i])) * Math.pow(26, columnCharArray.length - 1 - i);
+        for (char c : columnCharArray) {
+            result = result * 26 + (c - 'A' + 1);
         }
         // return the final sum
-        return sum;
-    }
-
-    /**
-     * Gives the string value of given alphabet
-     * 
-     * @param alphabet of which the integer value is asked
-     * @return integer value of asked alphabet
-     */
-    public int givenStringValue(String alphabet) {
-        Map<String, Integer> alphabetMap = new HashMap<>();
-        alphabetMap.put("A", 1);
-        alphabetMap.put("B", 2);
-        alphabetMap.put("C", 3);
-        alphabetMap.put("D", 4);
-        alphabetMap.put("E", 5);
-        alphabetMap.put("F", 6);
-        alphabetMap.put("G", 7);
-        alphabetMap.put("H", 8);
-        alphabetMap.put("I", 9);
-        alphabetMap.put("J", 10);
-        alphabetMap.put("K", 11);
-        alphabetMap.put("L", 12);
-        alphabetMap.put("M", 13);
-        alphabetMap.put("N", 14);
-        alphabetMap.put("O", 15);
-        alphabetMap.put("P", 16);
-        alphabetMap.put("Q", 17);
-        alphabetMap.put("R", 18);
-        alphabetMap.put("S", 19);
-        alphabetMap.put("T", 20);
-        alphabetMap.put("U", 21);
-        alphabetMap.put("V", 22);
-        alphabetMap.put("W", 23);
-        alphabetMap.put("X", 24);
-        alphabetMap.put("Y", 25);
-        alphabetMap.put("Z", 26);
-
-        return alphabetMap.get(alphabet);
+        return result;
     }
 }
