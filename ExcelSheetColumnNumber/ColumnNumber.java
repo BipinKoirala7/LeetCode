@@ -2,11 +2,10 @@ package ExcelSheetColumnNumber;
 
 /**
  * Title: Excel Sheet Column Number
- * Problem: Find the integer value of the given columnTitle
- * Link: https://leetcode.com/problems/excel-sheet-column-number
- * 
- * Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding 
+ * Problem: Given a string columnTitle that represents the column title as
+ * appears in an Excel sheet, return its corresponding
  * column number.
+ * Link: https://leetcode.com/problems/excel-sheet-column-number
  * 
  * For example:
  * A -> 1
@@ -14,7 +13,7 @@ package ExcelSheetColumnNumber;
  * C -> 3
  * Z -> 26
  * AA -> 27
- * AB -> 28 
+ * AB -> 28
  * 
  * Example 1:
  * Input: columnTitle = "A"
@@ -33,10 +32,13 @@ package ExcelSheetColumnNumber;
  * columnTitle consists only of uppercase English letters.
  * columnTitle is in the range ["A", "FXSHRXW"].
  * 
- * Approach: 
- * If we take a sum integer result to track the sum and loop over the character array from the columnTitle, then
- * we can get the value we need. We can use ascii number to find the value of the alphabet and since every step 
- * is worth 26 we can multiply the previous result by 26 before adding next number if exists.
+ * Approach:
+ * If we take a sum integer result to track the sum and loop over the character
+ * array from the columnTitle, then
+ * we can get the value we need. We can use ascii number to find the value of
+ * the alphabet and since every step
+ * is worth 26 we can multiply the previous result by 26 before adding next
+ * number if exists.
  * 
  * Complexity Analysis:
  * Time: 1ms, Beats 89.28%
