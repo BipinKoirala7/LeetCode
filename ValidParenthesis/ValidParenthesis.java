@@ -1,3 +1,5 @@
+package ValidParenthesis;
+
 /**
  * Title: Void Parenthesis
  * Problem: Given a string s containing just the characters '(', ')', '{',
@@ -53,6 +55,9 @@
  * Time Complexity: O(n)
  * Memory Space: 41.75 MB
  * Space Complexity: O(n)
+ * 
+ * @author Bipinkoirala
+ * @version 1.0
  */
 
 public class ValidParenthesis {
