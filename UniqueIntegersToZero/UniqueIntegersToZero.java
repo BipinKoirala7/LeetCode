@@ -1,8 +1,9 @@
-
+package UniqueIntegersToZero;
 /**
  * Title: Find N Unique Integers Sum up to Zero
  * Problem: Given an integer n, return any array containing n unique integers
  * such that they add up to 0.
+ * Link: https://leetcode.com/problems/unique-integers-to-zero/
  * 
  * Example 1:
  * 
