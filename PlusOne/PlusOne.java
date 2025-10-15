@@ -70,11 +70,17 @@ public class PlusOne {
 
             //  If digit hits 10, then we need to add number in next element
             if (digits[i] == 10) {
+                //  Divide the digit by 10
                 digits[i] = digits[i] % 10;
+                // if it is the last element, then we have to create new element
                 if (i == 0) {
+                    //  new array with plus one length
                     int[] newArray = new int[digits.length + 1];
+                    //  Copy digits to newly created array
                     System.arraycopy(digits, 0, newArray, 1, digits.length);
+                    //  Add the last element
                     newArray[0] = 1;
+                    //  change digits into new array
                     digits = newArray;
                 }
                 continue;
