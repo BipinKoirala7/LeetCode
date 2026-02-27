@@ -1,0 +1,43 @@
+/**
+ * Title: [The given Title]
+ * Problem: [Write the problem statement here briefly]
+ * Link: [Give the link of the problem]
+ *
+ * Explanation : [If given or needed]
+ *
+ * Example:
+ *   Input: ...
+ *   Output: ...
+ *   Explanation: ...
+ *
+ * Approach:
+ *   [Describe your approach in 2–3 lines]
+ *
+ * Complexity Analysis:
+ *   Time Complexity: O(...) 
+ *   Space Complexity: O(...)
+ *
+ * @author [Your Name]
+ * @since 1.0
+ */
+public class ProblemName {
+
+    /**
+     * [Brief description of what the method does]
+     *
+     * @param param1 [describe param1]
+     * @param param2 [describe param2]
+     * @return [describe the return value]
+     * @throws IllegalArgumentException if [condition when thrown]
+     */
+    public ReturnType methodName(Type1 param1, Type2 param2) {
+        // Step 1: [Explain what’s happening in plain words]
+
+        // Step 2: [Explain loop/recursion/condition]
+
+        // Step 3: [Return the result]
+
+        return ...;
+    }
+}
+

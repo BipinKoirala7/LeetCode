@@ -20,9 +20,10 @@ import java.util.HashMap;
  * 1 <= s.length, t.length <= 5 * 104
  * s and t consist of lowercase English letters.
  * 
- * My Approach: 
- * We can create character array from the given string and we can store a numerical 
- * value of each character and store in hashmap. At last, we should see if both 
+ * My Approach:
+ * We can create character array from the given string and we can store a
+ * numerical
+ * value of each character and store in hashmap. At last, we should see if both
  * hashmap are equal or not.
  * 
  * Complexity Analysis: (Best version: 1.0)
@@ -39,23 +40,23 @@ public class Anagram {
      * 
      * @param s first string
      * @param t second string
-     * @return  if anagram or not
+     * @return if anagram or not
      */
     public boolean isAnagram(String s, String t) {
-        //  If length of two string are different, it cannot be anagram
+        // If length of two string are different, it cannot be anagram
         if (s.length() != t.length()) {
             return false;
         }
 
-        //  Create character array of both strings
+        // Create character array of both strings
         char[] char1 = s.toCharArray();
         char[] char2 = t.toCharArray();
 
-        //  Hashmap for character and their occurrence count
+        // Hashmap for character and their occurrence count
         HashMap<String, Integer> hashMap1 = new HashMap<>();
         HashMap<String, Integer> hashMap2 = new HashMap<>();
 
-        //  loop to store the string character in hashmap with occurrence count
+        // loop to store the string character in hashmap with occurrence count
         for (char c : char1) {
             if (hashMap1.containsKey(String.valueOf(c))) {
                 int prev = hashMap1.get(String.valueOf(c));
@@ -77,7 +78,7 @@ public class Anagram {
             }
         }
 
-        //  return if both hashmap is equal
+        // return if both hashmap is equal
         return hashMap1.equals(hashMap2);
     }
 
@@ -89,7 +90,7 @@ public class Anagram {
      * @return if anagram or not
      * @version 1.1
      */
-    public boolean isAnagram(String s, String t) {
+    public boolean isAnagram2(String s, String t) {
         // If length of two string are different, it cannot be anagram
         if (s.length() != t.length()) {
             return false;
