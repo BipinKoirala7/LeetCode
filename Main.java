@@ -1,10 +1,9 @@
-import ContainsDuplicate.ContainsDuplicate;
+import ComplementOfBaseInteger.ComplementOfBaseInteger;
 
-import java.util.Arrays;
 
 public class Main {
   static void main() {
-    ContainsDuplicate containsDuplicate = new ContainsDuplicate();
-    System.out.println(containsDuplicate.containsDuplicate(new int[] {1,2,3,4}));
+    ComplementOfBaseInteger complement = new ComplementOfBaseInteger();
+    System.out.println(complement.bitwiseComplement(10));
   }
 }
