@@ -1,24 +1,30 @@
-import Practice.LinkedList.LinkedList;
+//import Practice.LinkedList.LinkedList;
+import RemoveLinkedListElements.RemoveLinkedListElements;
+import RemoveLinkedListElements.ListNode;
 
 
 public class Main {
   static void main() {
-    LinkedList linkedList = new LinkedList();
+//    LinkedList linkedList = new LinkedList();
+//
+//    linkedList.prepend(2);
+//    linkedList.prepend(5);
+//
+//    System.out.println("Head " + linkedList.getHead().getValue());
+//    System.out.println("Tail  " + linkedList.getTail().getValue());
+//
+//    System.out.println("Prepend " + linkedList.prepend(5).getValue());
+//    System.out.println("Insert at " + linkedList.insert(4, 5));
+//
+//    System.out.println("Remove First " + linkedList.removeFirst().getValue());
+//    System.out.println("Remove Last " + linkedList.removeLast().getValue());
+//    System.out.println("Remove at " + linkedList.remove(3).getValue());
+//
+//    linkedList.print();
 
-    linkedList.prepend(2);
-    linkedList.prepend(5);
-
-    System.out.println("Head " + linkedList.getHead().getValue());
-    System.out.println("Tail  " + linkedList.getTail().getValue());
-
-    System.out.println("Prepend " + linkedList.prepend(5).getValue());
-    System.out.println("Insert at " + linkedList.insert(4, 5).getValue());
-
-    System.out.println("Remove First " + linkedList.removeFirst().getValue());
-    System.out.println("Remove Last " + linkedList.removeLast().getValue());
-    System.out.println("Remove at " + linkedList.remove(3).getValue());
-
-    linkedList.print();
+    ListNode listNode = new ListNode(7, new ListNode(7, new ListNode(7, new ListNode(7, null))));
+    RemoveLinkedListElements removeLinkedListElements = new RemoveLinkedListElements();
+    System.out.println(removeLinkedListElements.removeElements(listNode, 7).val);;
   }
 }
 
