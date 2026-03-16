@@ -1,5 +1,4 @@
-import Practice.LinkedList.LinkedList;
-
+package Practice.LinkedList;
 
 public class Main {
   static void main() {
