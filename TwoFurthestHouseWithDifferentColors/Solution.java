@@ -1,3 +1,5 @@
+package TwoFurthestHouseWithDifferentColors;
+
 class Solution {
     public int maxDistance(int[] A) {
         int n = A.length;
